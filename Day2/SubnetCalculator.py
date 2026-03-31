@@ -4,20 +4,20 @@ def validIP(ip):
 
     for i in parts:
         if not i.isdigit():
-            print("{parts} : IP address must consist only of digits (no letters or special characters).")
+            print(f"\nWrong!!  {ip} : IP address must consist only of digits (no letters or special characters).\n")
             return False
         
         num = int(i)
         if num < 0 or num > 255:
-            print("{parts} : IP address must be a number between 0 and 255 (inclusive).")
+            print(f"\nWrong!!  {ip} : IP address must be a number between 0 and 255 (inclusive).\n")
             return False
         
     if len(parts) != 4:
-        print("{parts} : IP address must contain exactly four octets separated by periods (.) ")
+        print(f"\nWrong!!  {ip} : IP address must contain exactly four octets separated by periods (.)\n")
         return False
     
     else:
-        print(f"{parts} : IP Address is correct!!!")
+        print(f"\n{ip} : IP Address is correct!!!\n")
         print()
         print()
         return True
