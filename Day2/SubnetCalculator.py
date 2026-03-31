@@ -60,21 +60,22 @@ def validCIDR(x):
 
 
 print()
-print()
+print("----------------------------------")
 #get input from user
 user_ip = input("enter an ip address:  ")
 while not validIP(user_ip):
-
+    print("----------------------------------")
     user_ip = input("enter a new ip address:  ")
 
 #get cidr
+print("----------------------------------")
 user_Cidr = input ("enter CIDR:  ")
 while not validCIDR(user_Cidr):
-
+    print("----------------------------------")
     user_Cidr = input ("enter new CIDR:  ")
 
 #call subnetcalcultor
 subnetcalculator(user_ip, user_Cidr)
-print()
+print("----------------------------------")
 
             
