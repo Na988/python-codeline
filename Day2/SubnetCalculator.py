@@ -1,22 +1,20 @@
 
 def validIP(ip):
-
     parts = ip.split(".")
 
-    if len(parts) != 4:
-        print("/n/n{parts} : IP address must contain exactly four octets separated by periods (.) ")
-        return False
-    
     for i in parts:
         if not i.isdigit():
             print("{parts} : IP address must consist only of digits (no letters or special characters).")
             return False
         
         num = int(i)
-
         if num < 0 or num > 255:
             print("{parts} : IP address must be a number between 0 and 255 (inclusive).")
             return False
+        
+    if len(parts) != 4:
+        print("{parts} : IP address must contain exactly four octets separated by periods (.) ")
+        return False
     
     else:
         print(f"{parts} : IP Address is correct!!!")
@@ -27,6 +25,8 @@ def validIP(ip):
 
 
 def subnetcalculator(ip, cidr):
+    print()
+    print()
     last_octet = int(ip.split(".")[-1])
     rest_octet = ip.rsplit(".", 1)[0]
     print("--- Subnet Calculator ---")
@@ -47,20 +47,31 @@ def subnetcalculator(ip, cidr):
     print()
 
 
+def validCIDR(x):
+    if int(x) < 24 or int(x) > 32:
+        return False
+    
+    if not x.isdigit(): 
+        return False
+    
+    else: return True
+    
 
 
 
-
-
-
-
-
-#grt input from user
+print()
+print()
+#get input from user
 user_ip = input("enter an ip address:  ")
-user_Cidr = input ("enter CIDR:  ")
+while not validIP(user_ip):
 
-#call valid ip to validate the ip address
-validIP(user_ip)
+    user_ip = input("enter a new ip address:  ")
+
+#get cidr
+user_Cidr = input ("enter CIDR:  ")
+while not validCIDR(user_Cidr):
+
+    user_Cidr = input ("enter new CIDR:  ")
 
 #call subnetcalcultor
 subnetcalculator(user_ip, user_Cidr)
