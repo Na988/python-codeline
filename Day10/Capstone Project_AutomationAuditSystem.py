@@ -8,8 +8,8 @@ import time
 SSH_CONFIG = {
     "hostname": "192.168.100.99",
     "port": 22,
-    "username": "codline_academy",
-    "password": "mynameismuath"
+    "username": "username",
+    "password": "username123"
 }
 
 DEVICES = [
