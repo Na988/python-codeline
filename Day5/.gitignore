@@ -1,0 +1,115 @@
+# ====================
+# Python
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+*.whl
+MANIFEST
+
+# ====================
+# Virtual Environments
+# ====================
+.venv/
+venv/
+env/
+ENV/
+.env/
+.virtualenv/
+
+# ====================
+# Environment Variables
+# ====================
+.env
+.env.*
+!.env.example
+
+# ====================
+# Web Frameworks
+# ====================
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Flask / FastAPI
+instance/
+.webassets-cache
+
+# ====================
+# Database
+# ====================
+*.db
+*.sqlite
+*.sqlite3
+
+# ====================
+# Testing
+# ====================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.coveragerc
+nosetests.xml
+test-results/
+.tox/
+
+# ====================
+# Type Checking & Linting
+# ====================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# ====================
+# IDE & Editors
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ====================
+# Jupyter Notebooks
+# ====================
+.ipynb_checkpoints/
+*.ipynb
+
+# ====================
+# Packaging & Dependency Management
+# ====================
+pip-log.txt
+pip-delete-this-directory.txt
+poetry.lock
+Pipfile.lock
+
+# ====================
+# Logs & Temp Files
+# ====================
+*.log
+*.tmp
+*.bak
+logs/
+tmp/
